@@ -1,0 +1,148 @@
+{
+  "term": "2025_2026",
+  "court": 194,
+  "details": 11736,
+  "histories": 54724,
+  "source_empty_histories": [
+    "S.2618",
+    "S.3006",
+    "S.3119",
+    "S.3140",
+    "S.3167",
+    "H.5550",
+    "HD.221",
+    "HD.231",
+    "HD.410",
+    "HD.1010",
+    "HD.1248",
+    "HD.2761",
+    "HD.2906",
+    "HD.4114",
+    "HD.4362",
+    "HD.4575",
+    "HD.4593",
+    "HD.5197",
+    "HD.5975",
+    "HD.5976",
+    "HD.6121",
+    "HD.6255",
+    "HD.6286",
+    "HD.6287",
+    "HD.6361",
+    "HD.6365",
+    "HD.6366",
+    "HD.6372",
+    "HD.6374"
+  ],
+  "unavailable_source_fields": [
+    {
+      "bill": "H.5618",
+      "field": "petitioners_and_cosponsors",
+      "reason": "Advertised people tab contains no people table",
+      "url": "https://malegislature.gov/Bills/194/H5618/Cosponsor"
+    },
+    {
+      "bill": "H.5630",
+      "field": "petitioners_and_cosponsors",
+      "reason": "Advertised people tab contains no people table",
+      "url": "https://malegislature.gov/Bills/194/H5630/Cosponsor"
+    }
+  ],
+  "docket_bill_mappings": {},
+  "excluded_appendices": [
+    {
+      "label": "H.4250, Appendix B",
+      "url": "https://malegislature.gov/Bills/194/H4250B"
+    },
+    {
+      "label": "H.4250, Appendix C",
+      "url": "https://malegislature.gov/Bills/194/H4250C"
+    }
+  ],
+  "source_index_total": 11738,
+  "schema_version": 1,
+  "state": "MA",
+  "run_id": "f4d590abd7984fb4878b092cc49d665e",
+  "status": "succeeded",
+  "started_at": "2026-10-19T16:51:54.550858+00:00",
+  "completed_at": "2026-10-19T19:23:26.575818+00:00",
+  "outputs": [
+    {
+      "file": "MA_Bill_Details_2025_2026.csv",
+      "bytes": 6783098
+    },
+    {
+      "file": "MA_Bill_Histories_2025_2026.csv",
+      "bytes": 5875537
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "source_empty_histories",
+      "count": 29,
+      "records": [
+        "S.2618",
+        "S.3006",
+        "S.3119",
+        "S.3140",
+        "S.3167",
+        "H.5550",
+        "HD.221",
+        "HD.231",
+        "HD.410",
+        "HD.1010",
+        "HD.1248",
+        "HD.2761",
+        "HD.2906",
+        "HD.4114",
+        "HD.4362",
+        "HD.4575",
+        "HD.4593",
+        "HD.5197",
+        "HD.5975",
+        "HD.5976",
+        "HD.6121",
+        "HD.6255",
+        "HD.6286",
+        "HD.6287",
+        "HD.6361",
+        "HD.6365",
+        "HD.6366",
+        "HD.6372",
+        "HD.6374"
+      ]
+    },
+    {
+      "code": "unavailable_source_fields",
+      "count": 2,
+      "records": [
+        {
+          "bill": "H.5618",
+          "field": "petitioners_and_cosponsors",
+          "reason": "Advertised people tab contains no people table",
+          "url": "https://malegislature.gov/Bills/194/H5618/Cosponsor"
+        },
+        {
+          "bill": "H.5630",
+          "field": "petitioners_and_cosponsors",
+          "reason": "Advertised people tab contains no people table",
+          "url": "https://malegislature.gov/Bills/194/H5630/Cosponsor"
+        }
+      ]
+    },
+    {
+      "code": "excluded_appendices",
+      "count": 2,
+      "records": [
+        {
+          "label": "H.4250, Appendix B",
+          "url": "https://malegislature.gov/Bills/194/H4250B"
+        },
+        {
+          "label": "H.4250, Appendix C",
+          "url": "https://malegislature.gov/Bills/194/H4250C"
+        }
+      ]
+    }
+  ]
+}
