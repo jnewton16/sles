@@ -190,6 +190,7 @@ def scrape(state, term, verbose=False, force_fetch=False):
         print(f'Skipping MA {term}: completed outputs exist (use --force-fetch to refresh)'); return
     cache = folder/'.cache'/term; cache.mkdir(parents=True,exist_ok=True)
     details, histories, empty, aliases, appendices = [], [], [], {}, []
+    unavailable_fields = []
     with make_session() as http:
         session = select_session(_fetch(http,BASE_URL+'/Bills/Search?SearchTerms=&Page=1'),term)
         records, seen, total, page = [], set(), None, 1
@@ -228,13 +229,57 @@ def scrape(state, term, verbose=False, force_fetch=False):
             else:
                 empty.append(record['number']); _save(local,html)
             if 'Cosponsor-tab' in tabs:
-                part=cache/f'{key}_people.html'
-                people=_cached(part,lambda:_fetch(http,tabs['Cosponsor-tab']),force_fetch)
-                people_detail, _ = parse_header(people, record, session, term)
-                if _number(people_detail[-2]) != _number(canonical): raise ValueError('MA wrong people page identity')
-                names=parse_people(people)
-                detail[5], detail[7] = names['petitioners'], names['cosponsors']
-                _save(part,people)
+                part = cache / f'{key}_people.html'
+                people = _cached(
+                    part,
+                    lambda: _fetch(http, tabs['Cosponsor-tab']),
+                    force_fetch
+                )
+
+                people_detail, _ = parse_header(
+                    people, record, session, term
+                )
+
+                if _number(people_detail[-2]) != _number(canonical):
+                    raise ValueError('MA wrong people page identity')
+
+                soup = BeautifulSoup(people, 'lxml')
+                heading = soup.select_one('h3.fnSingleTab')
+                table = soup.select_one('table')
+
+                known_blank_tab = (
+                    session['court'] == 194
+                    and detail[2].strip().lower() == 'amendment'
+                    and heading is None
+                    and table is None
+                )
+
+                if known_blank_tab:
+                    unavailable_fields.append({
+                        'bill': record['number'],
+                        'field': 'petitioners_and_cosponsors',
+                        'reason': 'Advertised people tab contains no people table',
+                        'url': tabs['Cosponsor-tab'],
+                    })
+                else:
+                    try:
+                        names = parse_people(people)
+                    except ValueError as error:
+                        print(
+                            f"MA people-tab failure: {record['number']}",
+                            flush=True
+                        )
+                        print(
+                            f"People-tab URL: {tabs['Cosponsor-tab']}",
+                            flush=True
+                        )
+                        raise
+
+                    detail[5], detail[7] = (
+                        names['petitioners'],
+                        names['cosponsors']
+                    )
+                _save(part, people)
             details.append(detail)
             histories.extend([record['number'],session['label'],*row,j,term,canonical] for j,row in enumerate(actions,1))
             if verbose or i%25==0 or i==len(records): print(f'MA {i}/{len(records)} {record["number"]}: {len(actions)} actions',flush=True)
@@ -248,7 +293,7 @@ def scrape(state, term, verbose=False, force_fetch=False):
         for pending,target in staged: cache_io.replace(pending, target)
 
         write_manifest(manifest, {'term':term,'court':session['court'],'details':len(details),'histories':len(histories),'source_empty_histories':empty,
-                                      'docket_bill_mappings':aliases,'excluded_appendices':appendices,
+                                      'unavailable_source_fields': unavailable_fields,'docket_bill_mappings':aliases,'excluded_appendices':appendices,
                                       'source_index_total':len(records)})
     finally:
         for pending,_ in staged:cache_io.unlink(pending, missing_ok=True)
