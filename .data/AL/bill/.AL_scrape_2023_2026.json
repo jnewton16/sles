@@ -1,0 +1,4570 @@
+{
+  "term": "2023_2026",
+  "details": 5560,
+  "histories": 53291,
+  "excluded_confirmations": 546,
+  "sessions": [
+    "2023OS",
+    "2023RS",
+    "2023SS",
+    "2023SS2",
+    "2024RS",
+    "2025RS",
+    "2026RS",
+    "2026SS1"
+  ],
+  "source_snapshots": {
+    "2023": "2026-10-20T18:41:35.938142+00:00",
+    "2024": "2026-10-20T18:41:50.793072+00:00",
+    "2025": "2026-10-20T18:41:59.801436+00:00",
+    "2026": "2026-10-20T18:42:10.281601+00:00"
+  },
+  "source_title_fallbacks": [
+    {
+      "session": "2023SS",
+      "bill": "HR4",
+      "id": "3610634"
+    },
+    {
+      "session": "2023SS",
+      "bill": "HJR15",
+      "id": "3610651"
+    },
+    {
+      "session": "2023SS",
+      "bill": "HR18",
+      "id": "3610655"
+    },
+    {
+      "session": "2023SS",
+      "bill": "SR5",
+      "id": "3610657"
+    },
+    {
+      "session": "2023SS",
+      "bill": "SR6",
+      "id": "3610659"
+    },
+    {
+      "session": "2023RS",
+      "bill": "HR55",
+      "id": "3611193"
+    },
+    {
+      "session": "2023RS",
+      "bill": "SJR28",
+      "id": "3611324"
+    },
+    {
+      "session": "2023RS",
+      "bill": "HR119",
+      "id": "3611629"
+    },
+    {
+      "session": "2023RS",
+      "bill": "SJR74",
+      "id": "3612126"
+    },
+    {
+      "session": "2023RS",
+      "bill": "HJR244",
+      "id": "3612316"
+    },
+    {
+      "session": "2023RS",
+      "bill": "HR276",
+      "id": "3612372"
+    }
+  ],
+  "source_missing_titles": [
+    {
+      "session": "2023RS",
+      "bill": "HR199",
+      "id": "3612231"
+    },
+    {
+      "session": "2023RS",
+      "bill": "SR99",
+      "id": "3612383"
+    },
+    {
+      "session": "2023RS",
+      "bill": "HR288",
+      "id": "3612392"
+    }
+  ],
+  "source_unmatched_bir_histories": [
+    {
+      "session": "2023SS",
+      "bill": "BIR4",
+      "history_id": "6738350"
+    },
+    {
+      "session": "2023SS",
+      "bill": "BIR2",
+      "history_id": "6738396"
+    },
+    {
+      "session": "2023SS",
+      "bill": "BIR1",
+      "history_id": "6738422"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1",
+      "history_id": "6759758"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR10",
+      "history_id": "6759759"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR100",
+      "history_id": "6759760"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR105",
+      "history_id": "6759761"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR107",
+      "history_id": "6759762"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR111",
+      "history_id": "6759763"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR112",
+      "history_id": "6759764"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR113",
+      "history_id": "6759765"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR12",
+      "history_id": "6759766"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR122",
+      "history_id": "6759767"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR127",
+      "history_id": "6759768"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR128",
+      "history_id": "6759769"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR13",
+      "history_id": "6759770"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR132",
+      "history_id": "6759771"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR14",
+      "history_id": "6759772"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR150",
+      "history_id": "6759773"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR156",
+      "history_id": "6759774"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR162",
+      "history_id": "6759775"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR162",
+      "history_id": "6759776"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR173",
+      "history_id": "6759777"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6759778"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6759779"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6759780"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6759781"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6759782"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR178",
+      "history_id": "6759783"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR179",
+      "history_id": "6759784"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR180",
+      "history_id": "6759785"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR190",
+      "history_id": "6759786"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR195",
+      "history_id": "6759787"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR197",
+      "history_id": "6759788"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR250",
+      "history_id": "6759789"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR252",
+      "history_id": "6759790"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR253",
+      "history_id": "6759791"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR258",
+      "history_id": "6759792"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR268",
+      "history_id": "6759793"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR276",
+      "history_id": "6759794"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR277",
+      "history_id": "6759795"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR281",
+      "history_id": "6759796"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR283",
+      "history_id": "6759797"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR289",
+      "history_id": "6759798"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR293",
+      "history_id": "6759799"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR294",
+      "history_id": "6759800"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR3",
+      "history_id": "6759801"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR3",
+      "history_id": "6759802"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR327",
+      "history_id": "6759803"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR327",
+      "history_id": "6759804"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR33",
+      "history_id": "6759805"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR34",
+      "history_id": "6759806"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR342",
+      "history_id": "6759807"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR35",
+      "history_id": "6759808"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR354",
+      "history_id": "6759809"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR357",
+      "history_id": "6759810"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR36",
+      "history_id": "6759811"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR38",
+      "history_id": "6759812"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR382",
+      "history_id": "6759813"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR383",
+      "history_id": "6759814"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR384",
+      "history_id": "6759815"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR385",
+      "history_id": "6759816"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR386",
+      "history_id": "6759817"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR387",
+      "history_id": "6759818"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR388",
+      "history_id": "6759819"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR389",
+      "history_id": "6759820"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR390",
+      "history_id": "6759821"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR391",
+      "history_id": "6759822"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR392",
+      "history_id": "6759823"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR393",
+      "history_id": "6759824"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR394",
+      "history_id": "6759825"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR395",
+      "history_id": "6759826"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR396",
+      "history_id": "6759827"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR397",
+      "history_id": "6759828"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR404",
+      "history_id": "6759829"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR473",
+      "history_id": "6759830"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR5",
+      "history_id": "6759831"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR50",
+      "history_id": "6759832"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR60",
+      "history_id": "6759833"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR62",
+      "history_id": "6759834"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR68",
+      "history_id": "6759835"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR69",
+      "history_id": "6759836"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR71",
+      "history_id": "6759837"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR73",
+      "history_id": "6759838"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR74",
+      "history_id": "6759839"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR78",
+      "history_id": "6759840"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR80",
+      "history_id": "6759841"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR90",
+      "history_id": "6759842"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR98",
+      "history_id": "6759843"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR134",
+      "history_id": "6764006"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR135",
+      "history_id": "6764007"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1",
+      "history_id": "6764013"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR135",
+      "history_id": "6764014"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR148",
+      "history_id": "6764015"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR152",
+      "history_id": "6764016"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR159",
+      "history_id": "6764017"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR161",
+      "history_id": "6764018"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR170",
+      "history_id": "6764019"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR171",
+      "history_id": "6764020"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR172",
+      "history_id": "6764021"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR186",
+      "history_id": "6764022"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR188",
+      "history_id": "6764023"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR194",
+      "history_id": "6764024"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR198",
+      "history_id": "6764025"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR205",
+      "history_id": "6764026"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR208",
+      "history_id": "6764027"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR210",
+      "history_id": "6764028"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR226",
+      "history_id": "6764029"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR232",
+      "history_id": "6764030"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR234",
+      "history_id": "6764031"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR235",
+      "history_id": "6764032"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR237",
+      "history_id": "6764033"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR24",
+      "history_id": "6764034"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR241",
+      "history_id": "6764035"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR255",
+      "history_id": "6764036"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR257",
+      "history_id": "6764037"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR289",
+      "history_id": "6764038"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR344",
+      "history_id": "6764039"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR362",
+      "history_id": "6764040"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR400",
+      "history_id": "6764041"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR401",
+      "history_id": "6764042"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR447",
+      "history_id": "6764043"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR47",
+      "history_id": "6764044"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR49",
+      "history_id": "6764045"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR54",
+      "history_id": "6764046"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR79",
+      "history_id": "6764047"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR82",
+      "history_id": "6764048"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR85",
+      "history_id": "6764049"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR93",
+      "history_id": "6764050"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR97",
+      "history_id": "6764051"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR105",
+      "history_id": "6765205"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR129",
+      "history_id": "6765206"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR139",
+      "history_id": "6765207"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR207",
+      "history_id": "6765208"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR215",
+      "history_id": "6765209"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR219",
+      "history_id": "6765210"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR223",
+      "history_id": "6765211"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR231",
+      "history_id": "6765212"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR371",
+      "history_id": "6765213"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR421",
+      "history_id": "6765214"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR43",
+      "history_id": "6765215"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR446",
+      "history_id": "6765216"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR46",
+      "history_id": "6765217"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR463",
+      "history_id": "6765218"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR465",
+      "history_id": "6765219"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR467",
+      "history_id": "6765220"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR476",
+      "history_id": "6765221"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR551",
+      "history_id": "6765222"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR104",
+      "history_id": "6765332"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR178",
+      "history_id": "6765333"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR470",
+      "history_id": "6765334"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR482",
+      "history_id": "6765335"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR500",
+      "history_id": "6765336"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR516",
+      "history_id": "6765337"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR63",
+      "history_id": "6765338"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR65",
+      "history_id": "6765339"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR469",
+      "history_id": "6765395"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR478",
+      "history_id": "6765396"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR228",
+      "history_id": "6765567"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR243",
+      "history_id": "6765568"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR213",
+      "history_id": "6765598"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR252",
+      "history_id": "6765599"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR276",
+      "history_id": "6765600"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR337",
+      "history_id": "6765601"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR445",
+      "history_id": "6765602"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR452",
+      "history_id": "6765603"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR471",
+      "history_id": "6765604"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR473",
+      "history_id": "6765605"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR55",
+      "history_id": "6765606"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR111",
+      "history_id": "6765661"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR149",
+      "history_id": "6765662"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR170",
+      "history_id": "6765663"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR172",
+      "history_id": "6765664"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR193",
+      "history_id": "6765665"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR27",
+      "history_id": "6765666"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR359",
+      "history_id": "6765667"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR39",
+      "history_id": "6765668"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR472",
+      "history_id": "6765669"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR493",
+      "history_id": "6765670"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR494",
+      "history_id": "6765671"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR519",
+      "history_id": "6765672"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR571",
+      "history_id": "6765673"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR91",
+      "history_id": "6765674"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR357",
+      "history_id": "6765788"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR382",
+      "history_id": "6765789"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR412",
+      "history_id": "6765790"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR524",
+      "history_id": "6765791"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR56",
+      "history_id": "6765792"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR136",
+      "history_id": "6765915"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR383",
+      "history_id": "6765916"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR384",
+      "history_id": "6765917"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR385",
+      "history_id": "6765918"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR386",
+      "history_id": "6765919"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR387",
+      "history_id": "6765920"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR388",
+      "history_id": "6765921"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR389",
+      "history_id": "6765922"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR390",
+      "history_id": "6765923"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR391",
+      "history_id": "6765924"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR392",
+      "history_id": "6765925"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR393",
+      "history_id": "6765926"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR394",
+      "history_id": "6765927"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR395",
+      "history_id": "6765928"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR111",
+      "history_id": "6766042"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR60",
+      "history_id": "6766043"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR396",
+      "history_id": "6766466"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR397",
+      "history_id": "6766467"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR12",
+      "history_id": "6766606"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR13",
+      "history_id": "6766607"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR482",
+      "history_id": "6766871"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR500",
+      "history_id": "6766872"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR565",
+      "history_id": "6766873"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR470",
+      "history_id": "6766998"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR478",
+      "history_id": "6766999"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR94",
+      "history_id": "6767000"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR134",
+      "history_id": "6767061"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR135",
+      "history_id": "6767062"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR139",
+      "history_id": "6767063"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR143",
+      "history_id": "6767064"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR145",
+      "history_id": "6767065"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR156",
+      "history_id": "6767066"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR159",
+      "history_id": "6767067"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR207",
+      "history_id": "6767068"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR210",
+      "history_id": "6767069"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR219",
+      "history_id": "6767070"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR223",
+      "history_id": "6767071"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR235",
+      "history_id": "6767072"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR237",
+      "history_id": "6767073"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR241",
+      "history_id": "6767074"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR371",
+      "history_id": "6767075"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR43",
+      "history_id": "6767076"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR446",
+      "history_id": "6767077"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR457",
+      "history_id": "6767078"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR463",
+      "history_id": "6767079"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR544",
+      "history_id": "6767080"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR62",
+      "history_id": "6767081"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR107",
+      "history_id": "6767188"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR143",
+      "history_id": "6767189"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR572",
+      "history_id": "6767190"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR196",
+      "history_id": "6767315"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR30",
+      "history_id": "6767346"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR57",
+      "history_id": "6767347"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR122",
+      "history_id": "6767377"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR141",
+      "history_id": "6767378"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR248",
+      "history_id": "6767379"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR87",
+      "history_id": "6767380"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR127",
+      "history_id": "6767408"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR140",
+      "history_id": "6767409"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR336",
+      "history_id": "6767410"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR369",
+      "history_id": "6767411"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR48",
+      "history_id": "6767412"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR518",
+      "history_id": "6767413"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR556",
+      "history_id": "6767414"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR359",
+      "history_id": "6767551"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR472",
+      "history_id": "6767552"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR493",
+      "history_id": "6767553"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR494",
+      "history_id": "6767554"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR519",
+      "history_id": "6767555"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR612",
+      "history_id": "6767556"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR620",
+      "history_id": "6767557"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR634",
+      "history_id": "6767558"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR636",
+      "history_id": "6767559"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR660",
+      "history_id": "6767560"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR690",
+      "history_id": "6767561"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR691",
+      "history_id": "6767562"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR185",
+      "history_id": "6767614"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR187",
+      "history_id": "6767615"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR221",
+      "history_id": "6767616"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR222",
+      "history_id": "6767617"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR224",
+      "history_id": "6767618"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR564",
+      "history_id": "6767619"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR649",
+      "history_id": "6767677"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR103",
+      "history_id": "6767740"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR148",
+      "history_id": "6767741"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR152",
+      "history_id": "6767742"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR158",
+      "history_id": "6767743"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR194",
+      "history_id": "6767744"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR199",
+      "history_id": "6767745"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR204",
+      "history_id": "6767746"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR208",
+      "history_id": "6767747"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR23",
+      "history_id": "6767748"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR277",
+      "history_id": "6767749"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR28",
+      "history_id": "6767750"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR288",
+      "history_id": "6767751"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR328",
+      "history_id": "6767752"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR340",
+      "history_id": "6767753"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR345",
+      "history_id": "6767754"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR358",
+      "history_id": "6767755"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR411",
+      "history_id": "6767756"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR475",
+      "history_id": "6767757"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR485",
+      "history_id": "6767758"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR5",
+      "history_id": "6767759"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR501",
+      "history_id": "6767760"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR503",
+      "history_id": "6767761"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR537",
+      "history_id": "6767762"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR543",
+      "history_id": "6767763"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR549",
+      "history_id": "6767764"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR583",
+      "history_id": "6767765"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR61",
+      "history_id": "6767766"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR623",
+      "history_id": "6767767"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR646",
+      "history_id": "6767768"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR69",
+      "history_id": "6767769"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR74",
+      "history_id": "6767770"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR93",
+      "history_id": "6767771"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR98",
+      "history_id": "6767772"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR146",
+      "history_id": "6767995"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR182",
+      "history_id": "6767996"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR23",
+      "history_id": "6767997"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR251",
+      "history_id": "6767998"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR342",
+      "history_id": "6767999"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR522",
+      "history_id": "6768000"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR549",
+      "history_id": "6768001"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR639",
+      "history_id": "6768002"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR641",
+      "history_id": "6768003"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR192",
+      "history_id": "6768507"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR474",
+      "history_id": "6768508"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR566",
+      "history_id": "6768509"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR130",
+      "history_id": "6768634"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR171",
+      "history_id": "6768635"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR205",
+      "history_id": "6768636"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR226",
+      "history_id": "6768637"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR232",
+      "history_id": "6768638"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR234",
+      "history_id": "6768639"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR243",
+      "history_id": "6768640"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR354",
+      "history_id": "6768641"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR355",
+      "history_id": "6768642"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR445",
+      "history_id": "6768643"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR447",
+      "history_id": "6768644"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR449",
+      "history_id": "6768645"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR46",
+      "history_id": "6768646"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR476",
+      "history_id": "6768647"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR481",
+      "history_id": "6768648"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR484",
+      "history_id": "6768649"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR486",
+      "history_id": "6768650"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR528",
+      "history_id": "6768651"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR529",
+      "history_id": "6768652"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR532",
+      "history_id": "6768653"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR541",
+      "history_id": "6768654"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR557",
+      "history_id": "6768655"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR589",
+      "history_id": "6768656"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR615",
+      "history_id": "6768657"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR625",
+      "history_id": "6768658"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR64",
+      "history_id": "6768659"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR68",
+      "history_id": "6768660"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR720",
+      "history_id": "6768661"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR90",
+      "history_id": "6768662"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR293",
+      "history_id": "6769016"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR81",
+      "history_id": "6769017"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR142",
+      "history_id": "6769143"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR161",
+      "history_id": "6769144"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR184",
+      "history_id": "6769145"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR203",
+      "history_id": "6769146"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR212",
+      "history_id": "6769147"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR36",
+      "history_id": "6769148"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR557",
+      "history_id": "6769149"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR6",
+      "history_id": "6769150"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR7",
+      "history_id": "6769151"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR100",
+      "history_id": "6769237"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR144",
+      "history_id": "6769238"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR183",
+      "history_id": "6769239"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR203",
+      "history_id": "6769240"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR249",
+      "history_id": "6769299"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR33",
+      "history_id": "6769300"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR34",
+      "history_id": "6769301"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR659",
+      "history_id": "6769302"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR732",
+      "history_id": "6769303"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR735",
+      "history_id": "6769304"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR800",
+      "history_id": "6769305"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR8",
+      "history_id": "6769330"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR191",
+      "history_id": "6769457"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR225",
+      "history_id": "6769458"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR416",
+      "history_id": "6769459"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR193",
+      "history_id": "6769520"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR616",
+      "history_id": "6769521"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR709",
+      "history_id": "6769522"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR715",
+      "history_id": "6769523"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR80",
+      "history_id": "6769524"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR457",
+      "history_id": "6769551"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR47",
+      "history_id": "6769552"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR56",
+      "history_id": "6769553"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR147",
+      "history_id": "6769582"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR275",
+      "history_id": "6769583"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR495",
+      "history_id": "6769584"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR514",
+      "history_id": "6769585"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR520",
+      "history_id": "6769586"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR587",
+      "history_id": "6769587"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR692",
+      "history_id": "6769588"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR91",
+      "history_id": "6769589"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR94",
+      "history_id": "6769590"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR97",
+      "history_id": "6769591"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR765",
+      "history_id": "6769645"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR173",
+      "history_id": "6769708"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR213",
+      "history_id": "6769709"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR24",
+      "history_id": "6769710"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR412",
+      "history_id": "6769711"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR250",
+      "history_id": "6769771"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR104",
+      "history_id": "6769801"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR283",
+      "history_id": "6769802"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR35",
+      "history_id": "6769803"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR415",
+      "history_id": "6769804"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR462",
+      "history_id": "6769805"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR487",
+      "history_id": "6769806"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR567",
+      "history_id": "6769807"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR619",
+      "history_id": "6769808"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR621",
+      "history_id": "6769809"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR751",
+      "history_id": "6769810"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR177",
+      "history_id": "6770351"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR180",
+      "history_id": "6770352"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR190",
+      "history_id": "6770353"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR215",
+      "history_id": "6770354"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR465",
+      "history_id": "6770355"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR467",
+      "history_id": "6770356"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR620",
+      "history_id": "6770357"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR636",
+      "history_id": "6770358"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR660",
+      "history_id": "6770359"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR774",
+      "history_id": "6770360"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR248",
+      "history_id": "6770478"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR284",
+      "history_id": "6770479"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR524",
+      "history_id": "6770480"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR585",
+      "history_id": "6770481"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR716",
+      "history_id": "6770482"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR772",
+      "history_id": "6770483"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR285",
+      "history_id": "6770605"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR549",
+      "history_id": "6770606"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR556",
+      "history_id": "6770607"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR566",
+      "history_id": "6770608"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR639",
+      "history_id": "6770609"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR641",
+      "history_id": "6770610"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR807",
+      "history_id": "6770611"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR12",
+      "history_id": "6770769"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR13",
+      "history_id": "6770770"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR730",
+      "history_id": "6770771"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR733",
+      "history_id": "6770772"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR228",
+      "history_id": "6770896"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR270",
+      "history_id": "6770897"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR271",
+      "history_id": "6770898"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR273",
+      "history_id": "6770899"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR278",
+      "history_id": "6770900"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR286",
+      "history_id": "6770901"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR296",
+      "history_id": "6770902"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR399",
+      "history_id": "6770903"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR421",
+      "history_id": "6770904"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR452",
+      "history_id": "6770905"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR549",
+      "history_id": "6770906"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR735",
+      "history_id": "6770907"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR752",
+      "history_id": "6770908"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR813",
+      "history_id": "6770909"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR819",
+      "history_id": "6770910"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR852",
+      "history_id": "6770911"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR858",
+      "history_id": "6770912"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR861",
+      "history_id": "6770913"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR272",
+      "history_id": "6771151"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR663",
+      "history_id": "6771295"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR838",
+      "history_id": "6771296"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR839",
+      "history_id": "6771297"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR840",
+      "history_id": "6771298"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR841",
+      "history_id": "6771299"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR842",
+      "history_id": "6771300"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR843",
+      "history_id": "6771301"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR844",
+      "history_id": "6771302"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR845",
+      "history_id": "6771303"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR846",
+      "history_id": "6771304"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR873",
+      "history_id": "6771305"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR615",
+      "history_id": "6771358"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR709",
+      "history_id": "6771359"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR720",
+      "history_id": "6771389"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR73",
+      "history_id": "6771390"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR748",
+      "history_id": "6771391"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR784",
+      "history_id": "6771392"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR214",
+      "history_id": "6771420"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR216",
+      "history_id": "6771421"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR217",
+      "history_id": "6771422"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR420",
+      "history_id": "6771423"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR503",
+      "history_id": "6771424"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR513",
+      "history_id": "6771425"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR537",
+      "history_id": "6771426"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR803",
+      "history_id": "6771427"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR829",
+      "history_id": "6771428"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR486",
+      "history_id": "6771483"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR785",
+      "history_id": "6771546"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR889",
+      "history_id": "6771609"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR890",
+      "history_id": "6771610"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR749",
+      "history_id": "6771672"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR581",
+      "history_id": "6771703"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR758",
+      "history_id": "6771704"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR645",
+      "history_id": "6772104"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR651",
+      "history_id": "6772105"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR584",
+      "history_id": "6772294"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR106",
+      "history_id": "6772325"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR694",
+      "history_id": "6772326"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR343",
+      "history_id": "6772451"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR475",
+      "history_id": "6772452"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR492",
+      "history_id": "6772453"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR586",
+      "history_id": "6772454"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR736",
+      "history_id": "6772455"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR863",
+      "history_id": "6772456"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR27",
+      "history_id": "6772578"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR279",
+      "history_id": "6772579"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR336",
+      "history_id": "6772580"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR490",
+      "history_id": "6772581"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR518",
+      "history_id": "6772582"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR538",
+      "history_id": "6772583"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR57",
+      "history_id": "6772584"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR573",
+      "history_id": "6772585"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR617",
+      "history_id": "6772586"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR646",
+      "history_id": "6772587"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR787",
+      "history_id": "6772588"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR809",
+      "history_id": "6772589"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR885",
+      "history_id": "6772590"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR113",
+      "history_id": "6772705"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR666",
+      "history_id": "6772706"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR755",
+      "history_id": "6772707"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR647",
+      "history_id": "6772775"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR774",
+      "history_id": "6772887"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR871",
+      "history_id": "6772888"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR923",
+      "history_id": "6772889"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR926",
+      "history_id": "6772890"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR927",
+      "history_id": "6772891"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR930",
+      "history_id": "6772892"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR876",
+      "history_id": "6772918"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR624",
+      "history_id": "6772991"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR648",
+      "history_id": "6772992"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR542",
+      "history_id": "6773054"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR565",
+      "history_id": "6773055"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR612",
+      "history_id": "6773056"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR659",
+      "history_id": "6773057"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR705",
+      "history_id": "6773058"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR732",
+      "history_id": "6773059"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR887",
+      "history_id": "6773060"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR952",
+      "history_id": "6773061"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR167",
+      "history_id": "6773181"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR725",
+      "history_id": "6773182"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR847",
+      "history_id": "6773183"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR912",
+      "history_id": "6773184"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR920",
+      "history_id": "6773185"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR130",
+      "history_id": "6773244"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR260",
+      "history_id": "6773245"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR48",
+      "history_id": "6773246"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR497",
+      "history_id": "6773247"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR530",
+      "history_id": "6773248"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR535",
+      "history_id": "6773249"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR708",
+      "history_id": "6773250"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR824",
+      "history_id": "6773251"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR835",
+      "history_id": "6773252"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR864",
+      "history_id": "6773253"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR865",
+      "history_id": "6773254"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR894",
+      "history_id": "6773255"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR897",
+      "history_id": "6773256"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR955",
+      "history_id": "6773257"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR370",
+      "history_id": "6773371"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR710",
+      "history_id": "6773372"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR711",
+      "history_id": "6773373"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR458",
+      "history_id": "6773434"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR485",
+      "history_id": "6773435"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR751",
+      "history_id": "6773436"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR30",
+      "history_id": "6773497"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR501",
+      "history_id": "6773498"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR872",
+      "history_id": "6773499"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR6",
+      "history_id": "6773560"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR642",
+      "history_id": "6773820"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR398",
+      "history_id": "6773883"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR635",
+      "history_id": "6773884"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR362",
+      "history_id": "6773946"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR807",
+      "history_id": "6773947"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR610",
+      "history_id": "6774104"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR652",
+      "history_id": "6774105"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR782",
+      "history_id": "6774106"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR828",
+      "history_id": "6774107"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR249",
+      "history_id": "6774167"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR551",
+      "history_id": "6774168"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR690",
+      "history_id": "6774169"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR810",
+      "history_id": "6774170"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR901",
+      "history_id": "6774171"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR690",
+      "history_id": "6774294"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1022",
+      "history_id": "6774376"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1030",
+      "history_id": "6774377"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1034",
+      "history_id": "6774378"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1035",
+      "history_id": "6774379"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1044",
+      "history_id": "6774380"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1045",
+      "history_id": "6774381"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1048",
+      "history_id": "6774382"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1060",
+      "history_id": "6774383"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR200",
+      "history_id": "6774384"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR578",
+      "history_id": "6774385"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR858",
+      "history_id": "6774386"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR878",
+      "history_id": "6774387"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR577",
+      "history_id": "6774439"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR689",
+      "history_id": "6774440"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR744",
+      "history_id": "6774441"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR870",
+      "history_id": "6774454"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR345",
+      "history_id": "6774469"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR772",
+      "history_id": "6774470"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR888",
+      "history_id": "6774471"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1039",
+      "history_id": "6774553"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR839",
+      "history_id": "6774554"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR841",
+      "history_id": "6774555"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR846",
+      "history_id": "6774556"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR873",
+      "history_id": "6774557"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR953",
+      "history_id": "6774558"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR785",
+      "history_id": "6774584"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR800",
+      "history_id": "6774585"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR812",
+      "history_id": "6774586"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR842",
+      "history_id": "6774587"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR902",
+      "history_id": "6774588"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR923",
+      "history_id": "6774589"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR927",
+      "history_id": "6774590"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR971",
+      "history_id": "6774591"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR963",
+      "history_id": "6774647"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR132",
+      "history_id": "6774654"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR489",
+      "history_id": "6774655"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR514",
+      "history_id": "6774656"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR525",
+      "history_id": "6774657"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR777",
+      "history_id": "6774658"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR818",
+      "history_id": "6774659"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR908",
+      "history_id": "6774660"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR132",
+      "history_id": "6774717"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR50",
+      "history_id": "6774718"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR81",
+      "history_id": "6774719"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR895",
+      "history_id": "6774720"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR919",
+      "history_id": "6774721"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR188",
+      "history_id": "6774780"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR267",
+      "history_id": "6774781"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR369",
+      "history_id": "6774782"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR38",
+      "history_id": "6774783"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR49",
+      "history_id": "6774784"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR522",
+      "history_id": "6774785"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR619",
+      "history_id": "6774786"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR212",
+      "history_id": "6774811"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1043",
+      "history_id": "6774845"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1080",
+      "history_id": "6774846"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR705",
+      "history_id": "6774847"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR734",
+      "history_id": "6774848"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR887",
+      "history_id": "6774849"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR901",
+      "history_id": "6774850"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR106",
+      "history_id": "6774972"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR492",
+      "history_id": "6774973"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR304",
+      "history_id": "6775099"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR543",
+      "history_id": "6775100"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR696",
+      "history_id": "6775101"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR893",
+      "history_id": "6775102"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR907",
+      "history_id": "6775103"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1041",
+      "history_id": "6775226"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1050",
+      "history_id": "6775227"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR663",
+      "history_id": "6775228"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR871",
+      "history_id": "6775229"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR886",
+      "history_id": "6775230"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR892",
+      "history_id": "6775231"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR920",
+      "history_id": "6775232"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR930",
+      "history_id": "6775233"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR958",
+      "history_id": "6775234"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR959",
+      "history_id": "6775235"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR814",
+      "history_id": "6775353"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR891",
+      "history_id": "6775462"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR929",
+      "history_id": "6775463"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR158",
+      "history_id": "6775525"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR528",
+      "history_id": "6775526"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR716",
+      "history_id": "6775527"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR746",
+      "history_id": "6775528"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR779",
+      "history_id": "6775529"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR909",
+      "history_id": "6775530"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1029",
+      "history_id": "6775918"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1053",
+      "history_id": "6775919"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1061",
+      "history_id": "6775920"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1086",
+      "history_id": "6775921"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1091",
+      "history_id": "6775922"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1092",
+      "history_id": "6775923"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1046",
+      "history_id": "6775981"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1089",
+      "history_id": "6775982"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR550",
+      "history_id": "6775983"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR605",
+      "history_id": "6775984"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR662",
+      "history_id": "6775985"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR608",
+      "history_id": "6776108"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR631",
+      "history_id": "6776109"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1035",
+      "history_id": "6776235"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1097",
+      "history_id": "6776236"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR634",
+      "history_id": "6776237"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR645",
+      "history_id": "6776238"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR651",
+      "history_id": "6776239"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR827",
+      "history_id": "6776240"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR856",
+      "history_id": "6776241"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR96",
+      "history_id": "6776242"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1034",
+      "history_id": "6776298"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1060",
+      "history_id": "6776299"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1070",
+      "history_id": "6776300"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR406",
+      "history_id": "6776301"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR408",
+      "history_id": "6776302"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR632",
+      "history_id": "6776303"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR757",
+      "history_id": "6776304"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR951",
+      "history_id": "6776305"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1069",
+      "history_id": "6776425"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR196",
+      "history_id": "6776426"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR282",
+      "history_id": "6776427"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR290",
+      "history_id": "6776428"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR291",
+      "history_id": "6776429"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR291",
+      "history_id": "6776430"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR416",
+      "history_id": "6776431"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR786",
+      "history_id": "6776432"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR966",
+      "history_id": "6776433"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1016",
+      "history_id": "6776488"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR657",
+      "history_id": "6776489"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR884",
+      "history_id": "6776490"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR896",
+      "history_id": "6776491"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR900",
+      "history_id": "6776492"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR970",
+      "history_id": "6776493"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR140",
+      "history_id": "6776551"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR179",
+      "history_id": "6776552"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR23",
+      "history_id": "6776553"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR474",
+      "history_id": "6776554"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR692",
+      "history_id": "6776555"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR744",
+      "history_id": "6776556"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR752",
+      "history_id": "6776557"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR765",
+      "history_id": "6776558"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR784",
+      "history_id": "6776559"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR876",
+      "history_id": "6776560"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR955",
+      "history_id": "6776561"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR967",
+      "history_id": "6776562"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR969",
+      "history_id": "6776563"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1030",
+      "history_id": "6776730"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR222",
+      "history_id": "6776731"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR270",
+      "history_id": "6776732"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR270",
+      "history_id": "6776733"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR271",
+      "history_id": "6776734"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR271",
+      "history_id": "6776735"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR307",
+      "history_id": "6776736"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR819",
+      "history_id": "6776737"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1030",
+      "history_id": "6776761"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR185",
+      "history_id": "6776762"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR187",
+      "history_id": "6776763"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR224",
+      "history_id": "6776764"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR296",
+      "history_id": "6776765"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR529",
+      "history_id": "6776766"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR813",
+      "history_id": "6776767"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR221",
+      "history_id": "6776824"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR278",
+      "history_id": "6776825"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR852",
+      "history_id": "6776826"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR861",
+      "history_id": "6776918"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR220",
+      "history_id": "6776949"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1040",
+      "history_id": "6776956"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1117",
+      "history_id": "6776957"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1120",
+      "history_id": "6776958"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR231",
+      "history_id": "6776959"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR691",
+      "history_id": "6776960"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR838",
+      "history_id": "6776961"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR840",
+      "history_id": "6776962"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1043",
+      "history_id": "6777019"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1048",
+      "history_id": "6777020"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1096",
+      "history_id": "6777021"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR642",
+      "history_id": "6777022"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR730",
+      "history_id": "6777023"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR733",
+      "history_id": "6777024"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR734",
+      "history_id": "6777025"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR286",
+      "history_id": "6777050"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR273",
+      "history_id": "6777096"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR658",
+      "history_id": "6777097"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1110",
+      "history_id": "6777127"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR272",
+      "history_id": "6777128"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR658",
+      "history_id": "6777129"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1038",
+      "history_id": "6777158"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1122",
+      "history_id": "6777159"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR270",
+      "history_id": "6777160"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR271",
+      "history_id": "6777161"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1050",
+      "history_id": "6777221"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1068",
+      "history_id": "6777222"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1098",
+      "history_id": "6777223"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1124",
+      "history_id": "6777224"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1125",
+      "history_id": "6777225"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1126",
+      "history_id": "6777226"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1127",
+      "history_id": "6777227"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1128",
+      "history_id": "6777228"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1130",
+      "history_id": "6777229"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR217",
+      "history_id": "6777230"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR413",
+      "history_id": "6777231"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR61",
+      "history_id": "6777232"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR64",
+      "history_id": "6777233"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR654",
+      "history_id": "6777234"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR693",
+      "history_id": "6777235"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR810",
+      "history_id": "6777236"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR857",
+      "history_id": "6777237"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR954",
+      "history_id": "6777238"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR958",
+      "history_id": "6777239"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR959",
+      "history_id": "6777240"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR136",
+      "history_id": "6777348"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR191",
+      "history_id": "6777349"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR217",
+      "history_id": "6777350"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR255",
+      "history_id": "6777351"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR358",
+      "history_id": "6777352"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR449",
+      "history_id": "6777353"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR577",
+      "history_id": "6777354"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR581",
+      "history_id": "6777355"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR623",
+      "history_id": "6777356"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR758",
+      "history_id": "6777357"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR803",
+      "history_id": "6777358"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR872",
+      "history_id": "6777359"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR878",
+      "history_id": "6777360"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR912",
+      "history_id": "6777361"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1054",
+      "history_id": "6777411"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR189",
+      "history_id": "6777412"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR477",
+      "history_id": "6777413"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR509",
+      "history_id": "6777414"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR764",
+      "history_id": "6777415"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1024",
+      "history_id": "6777538"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1084",
+      "history_id": "6777539"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1105",
+      "history_id": "6777540"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR251",
+      "history_id": "6777541"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR410",
+      "history_id": "6777542"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR517",
+      "history_id": "6777543"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR532",
+      "history_id": "6777544"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR63",
+      "history_id": "6777545"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR928",
+      "history_id": "6777546"
+    },
+    {
+      "session": "2023RS",
+      "bill": "BIR1090",
+      "history_id": "6777665"
+    }
+  ],
+  "source_missing_action_text": [
+    {
+      "session": "2024RS",
+      "bill": "SB5",
+      "history_id": "6780393",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB5",
+      "history_id": "6780394",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB2",
+      "history_id": "6780529",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB2",
+      "history_id": "6780530",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB3",
+      "history_id": "6780531",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB3",
+      "history_id": "6780532",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB4",
+      "history_id": "6780533",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB4",
+      "history_id": "6780534",
+      "date": "2024-02-06"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB1",
+      "history_id": "6782495",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB1",
+      "history_id": "6782496",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB10",
+      "history_id": "6782498",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB10",
+      "history_id": "6782499",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB12",
+      "history_id": "6782501",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB12",
+      "history_id": "6782502",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB39",
+      "history_id": "6782503",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB39",
+      "history_id": "6782504",
+      "date": "2024-02-07"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB77",
+      "history_id": "6782736",
+      "date": "2024-02-13"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB77",
+      "history_id": "6782737",
+      "date": "2024-02-13"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB62",
+      "history_id": "6782782",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB62",
+      "history_id": "6782783",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB23",
+      "history_id": "6782784",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB23",
+      "history_id": "6782785",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB151",
+      "history_id": "6782786",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB151",
+      "history_id": "6782787",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB152",
+      "history_id": "6782788",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB152",
+      "history_id": "6782789",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB125",
+      "history_id": "6782790",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB125",
+      "history_id": "6782791",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB151",
+      "history_id": "6782797",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB151",
+      "history_id": "6782798",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB78",
+      "history_id": "6782799",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB78",
+      "history_id": "6782800",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB78",
+      "history_id": "6782801",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB78",
+      "history_id": "6782802",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB152",
+      "history_id": "6782803",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB152",
+      "history_id": "6782804",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB125",
+      "history_id": "6782805",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB125",
+      "history_id": "6782806",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB81",
+      "history_id": "6782807",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB81",
+      "history_id": "6782808",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782812",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782813",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782814",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782815",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782816",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB42",
+      "history_id": "6782817",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782819",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782820",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782821",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782822",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB121",
+      "history_id": "6782823",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB121",
+      "history_id": "6782824",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB121",
+      "history_id": "6782825",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB121",
+      "history_id": "6782826",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782827",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782828",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782829",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "HB21",
+      "history_id": "6782830",
+      "date": "2024-02-14"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB92",
+      "history_id": "6783534",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SB92",
+      "history_id": "6783535",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR5",
+      "history_id": "6783604",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR12",
+      "history_id": "6783611",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR10",
+      "history_id": "6783612",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR9",
+      "history_id": "6783613",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR7",
+      "history_id": "6783614",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR6",
+      "history_id": "6783615",
+      "date": "2024-02-20"
+    },
+    {
+      "session": "2024RS",
+      "bill": "SJR4",
+      "history_id": "6783616",
+      "date": "2024-02-20"
+    }
+  ],
+  "schema_version": 1,
+  "state": "AL",
+  "run_id": "99f6478110cc4e5f948ee9ae06729ac5",
+  "status": "succeeded",
+  "started_at": "2026-10-20T19:10:46.520126+00:00",
+  "completed_at": "2026-10-20T19:10:46.918073+00:00",
+  "outputs": [
+    {
+      "file": "AL_Bill_Details_2023_2026.csv",
+      "bytes": 3178586
+    },
+    {
+      "file": "AL_Bill_Histories_2023_2026.csv",
+      "bytes": 8414961
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "excluded_confirmations",
+      "count": 546,
+      "records": 546
+    }
+  ]
+}
