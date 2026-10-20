@@ -1,0 +1,373 @@
+{
+  "term": "2025_2026",
+  "counts": {
+    "2025": 847,
+    "2026": 1387
+  },
+  "details": 2234,
+  "histories": 25469,
+  "source_empty_sponsors": [
+    {
+      "bill": "HR1",
+      "year": 2025,
+      "lsr": "939",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=939&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "HR2",
+      "year": 2025,
+      "lsr": "940",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=940&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "HR3",
+      "year": 2025,
+      "lsr": "941",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=941&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "HR4",
+      "year": 2025,
+      "lsr": "942",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=942&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "HR5",
+      "year": 2025,
+      "lsr": "943",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=943&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR1",
+      "year": 2025,
+      "lsr": "173",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=173&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR2",
+      "year": 2025,
+      "lsr": "174",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=174&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR3",
+      "year": 2025,
+      "lsr": "175",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=175&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR4",
+      "year": 2025,
+      "lsr": "176",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=176&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR5",
+      "year": 2025,
+      "lsr": "177",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=177&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR6",
+      "year": 2025,
+      "lsr": "178",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=178&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR7",
+      "year": 2025,
+      "lsr": "179",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=179&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "SR8",
+      "year": 2025,
+      "lsr": "180",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=180&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    },
+    {
+      "bill": "HR48",
+      "year": 2026,
+      "lsr": "3272",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=3272&sy=2026&txtsessionyear=2026&sortoption=billnumber",
+      "reason": "Source explicitly records no sponsors"
+    }
+  ],
+  "source_missing_text": [
+    {
+      "bill": "SR1",
+      "year": 2025,
+      "lsr": "173",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=180&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR2",
+      "year": 2025,
+      "lsr": "174",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=181&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR3",
+      "year": 2025,
+      "lsr": "175",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=182&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR4",
+      "year": 2025,
+      "lsr": "176",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=183&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR5",
+      "year": 2025,
+      "lsr": "177",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=184&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR6",
+      "year": 2025,
+      "lsr": "178",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=185&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR7",
+      "year": 2025,
+      "lsr": "179",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=186&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    },
+    {
+      "bill": "SR8",
+      "year": 2025,
+      "lsr": "180",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=187&txtFormat=html",
+      "reason": "Official text page contains housekeeping notice instead of resolution text"
+    }
+  ],
+  "source_empty_histories": [
+    {
+      "bill": "HR48",
+      "year": 2026,
+      "lsr": "3272",
+      "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_docket.aspx?lsr=3272&sy=2026&txtsessionyear=2026&sortoption=billnumber",
+      "reason": "Source explicitly records no docket entries"
+    }
+  ],
+  "schema_version": 1,
+  "state": "NH",
+  "run_id": "1e11099f69704d4bb6a128c9675e734e",
+  "status": "succeeded",
+  "started_at": "2026-10-20T17:52:37.740524+00:00",
+  "completed_at": "2026-10-20T18:11:25.615369+00:00",
+  "outputs": [
+    {
+      "file": "NH_Bill_Details_2025_2026.csv",
+      "bytes": 1942008
+    },
+    {
+      "file": "NH_Bill_Histories_2025_2026.csv",
+      "bytes": 2722107
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "source_empty_sponsors",
+      "count": 14,
+      "records": [
+        {
+          "bill": "HR1",
+          "year": 2025,
+          "lsr": "939",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=939&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "HR2",
+          "year": 2025,
+          "lsr": "940",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=940&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "HR3",
+          "year": 2025,
+          "lsr": "941",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=941&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "HR4",
+          "year": 2025,
+          "lsr": "942",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=942&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "HR5",
+          "year": 2025,
+          "lsr": "943",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=943&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR1",
+          "year": 2025,
+          "lsr": "173",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=173&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR2",
+          "year": 2025,
+          "lsr": "174",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=174&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR3",
+          "year": 2025,
+          "lsr": "175",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=175&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR4",
+          "year": 2025,
+          "lsr": "176",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=176&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR5",
+          "year": 2025,
+          "lsr": "177",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=177&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR6",
+          "year": 2025,
+          "lsr": "178",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=178&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR7",
+          "year": 2025,
+          "lsr": "179",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=179&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "SR8",
+          "year": 2025,
+          "lsr": "180",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=180&sy=2025&txtsessionyear=2025&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        },
+        {
+          "bill": "HR48",
+          "year": 2026,
+          "lsr": "3272",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_status.aspx?lsr=3272&sy=2026&txtsessionyear=2026&sortoption=billnumber",
+          "reason": "Source explicitly records no sponsors"
+        }
+      ]
+    },
+    {
+      "code": "source_missing_text",
+      "count": 8,
+      "records": [
+        {
+          "bill": "SR1",
+          "year": 2025,
+          "lsr": "173",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=180&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR2",
+          "year": 2025,
+          "lsr": "174",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=181&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR3",
+          "year": 2025,
+          "lsr": "175",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=182&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR4",
+          "year": 2025,
+          "lsr": "176",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=183&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR5",
+          "year": 2025,
+          "lsr": "177",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=184&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR6",
+          "year": 2025,
+          "lsr": "178",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=185&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR7",
+          "year": 2025,
+          "lsr": "179",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=186&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        },
+        {
+          "bill": "SR8",
+          "year": 2025,
+          "lsr": "180",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/billText.aspx?sy=2025&id=187&txtFormat=html",
+          "reason": "Official text page contains housekeeping notice instead of resolution text"
+        }
+      ]
+    },
+    {
+      "code": "source_empty_histories",
+      "count": 1,
+      "records": [
+        {
+          "bill": "HR48",
+          "year": 2026,
+          "lsr": "3272",
+          "url": "https://gc.nh.gov/bill_status/legacy/bs2016/bill_docket.aspx?lsr=3272&sy=2026&txtsessionyear=2026&sortoption=billnumber",
+          "reason": "Source explicitly records no docket entries"
+        }
+      ]
+    }
+  ]
+}
