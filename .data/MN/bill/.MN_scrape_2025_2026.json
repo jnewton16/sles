@@ -1,0 +1,26 @@
+{
+  "term": "2025_2026",
+  "details": 10638,
+  "histories": 31425,
+  "session_counts": {
+    "2025_RS": 10590,
+    "2025_S1": 48
+  },
+  "schema_version": 1,
+  "state": "MN",
+  "run_id": "aec660b456134aa4b1872beaa4aa0e92",
+  "status": "succeeded",
+  "started_at": "2026-10-22T16:56:01.606580+00:00",
+  "completed_at": "2026-10-22T17:01:21.739542+00:00",
+  "outputs": [
+    {
+      "file": "MN_Bill_Details_2025_2026.csv",
+      "bytes": 6062721
+    },
+    {
+      "file": "MN_Bill_Histories_2025_2026.csv",
+      "bytes": 3594890
+    }
+  ],
+  "exceptions": []
+}
