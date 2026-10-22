@@ -1,0 +1,26 @@
+{
+  "term": "2025_2026",
+  "annual_base_counts": {
+    "2025": 2555,
+    "2026": 2981
+  },
+  "details": 3686,
+  "histories": 35821,
+  "schema_version": 1,
+  "state": "WA",
+  "run_id": "b345354477894f5692ba491f45ec9f7d",
+  "status": "succeeded",
+  "started_at": "2026-10-22T15:43:28.372253+00:00",
+  "completed_at": "2026-10-22T15:44:16.887180+00:00",
+  "outputs": [
+    {
+      "file": "WA_Bill_Details_2025_2026.csv",
+      "bytes": 1618158
+    },
+    {
+      "file": "WA_Bill_Histories_2025_2026.csv",
+      "bytes": 6919569
+    }
+  ],
+  "exceptions": []
+}
