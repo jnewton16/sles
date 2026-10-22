@@ -143,17 +143,139 @@ def parse_bill(html,record,session,term):
     if not histories:raise ValueError('MN empty history')
     return detail,histories
 
+def parse_senate_resolution_text(soup, record):
+    """Parse Senate-hosted resolution text across official page templates."""
+    number = record['number']
 
-def parse_text(html,record):
-    soup=BeautifulSoup(html,'lxml');heading=soup.select_one('h1.card-title')
-    if heading is None or re.sub(r'\s+','',heading.get_text())!=re.sub(r'([A-Z]+)0+(\d)',r'\1\2',record['number']):raise ValueError('MN wrong text bill identity')
-    prolog=soup.select_one('.btitle_prolog')
-    if prolog is None:raise ValueError('MN missing bill/resolution text prolog')
-    paragraph=prolog.find_parent('p')
-    if paragraph is None:raise ValueError('MN missing title paragraph')
-    for line in paragraph.select('.pl'):line.decompose()
-    return paragraph.get_text(' ',strip=True)
+    match = re.fullmatch(r'(SR|SC)(\d{4})', number)
 
+    if not match:
+        raise ValueError(
+            f'MN unexpected alternate Senate instrument: {number}'
+        )
+
+    prefix, digits = match.groups()
+    expected = int(digits)
+
+    identity_prefix = {
+        'SR': r'S\.R\.',
+        'SC': r'S\.C\.R\.',
+    }[prefix]
+
+    introduction = {
+        'SR': 'A Senate resolution',
+        'SC': 'A Senate concurrent resolution',
+    }[prefix]
+
+    containers = soup.select('.xtend')
+
+    if len(containers) != 1:
+        raise ValueError(
+            f'MN expected one Senate resolution text container: {number}'
+        )
+
+    container = containers[0]
+
+    # Both official Senate templates contain a resolution identity
+    # and legislative-session heading.
+    # The official Revisor status URL identifies the legislative session.
+    source_path = urlparse(record['url']).path
+    source_identity = re.fullmatch(
+        r'/bills/94/202[56]/[01]/(SR|SC)/(\d+)/?',
+        source_path
+    )
+
+    if (
+        source_identity is None
+        or source_identity.group(1) != prefix
+        or int(source_identity.group(2)) != expected
+    ):
+        raise ValueError(
+            f'MN Senate resolution source identity mismatch: {number}'
+        )
+
+    if re.fullmatch(
+        r'/bills/94/2025/1/(SR|SC)/\d+/?',
+        source_path
+    ):
+        session_pattern = r'2025 1st Special Session'
+    elif re.fullmatch(
+        r'/bills/94/202[56]/0/(SR|SC)/\d+/?',
+        source_path
+    ):
+        session_pattern = (
+            r'94th Legislative Session\s*\(2025-2026\)'
+        )
+    else:
+        raise ValueError(
+            f'MN unexpected Senate resolution source URL: {record["url"]}'
+        )
+
+    identity_pattern = (
+        rf'\b{identity_prefix}\s*No\.\s*0*{expected}\s*,\s*'
+        rf'as introduced:\s*{session_pattern}'
+    )
+    if not re.search(
+        identity_pattern,
+        soup.get_text(' ', strip=True),
+        re.I
+    ):
+        raise ValueError(
+            f'MN Senate resolution identity/session mismatch: {number}'
+        )
+
+    # Work on a copy so the original soup is unchanged.
+    text = BeautifulSoup(str(container), 'lxml')
+
+    for tag in text.select("var, a[id^='pl.']"):
+        tag.decompose()
+
+    body = re.sub(
+        r'\s+', ' ',
+        text.get_text(' ', strip=True)
+    ).strip()
+
+    match = re.match(
+        rf'^({re.escape(introduction)}\b.+?\.)'
+        r'(?=\s|$)',
+        body,
+        re.I
+    )
+
+    if match is None:
+        raise ValueError(
+            f'MN missing Senate resolution introductory text: {number}'
+        )
+
+    return match.group(1)
+
+def parse_text(html, record):
+    soup = BeautifulSoup(html, 'lxml')
+    if (
+        re.fullmatch(r'(SR|SC)\d{4}', record['number'])
+        and soup.select_one('.xtend')
+    ):
+        return parse_senate_resolution_text(soup, record)
+    heading = soup.select_one('h1.card-title')
+    if (
+        heading is None
+        or re.sub(r'\s+', '', heading.get_text())
+        != re.sub(
+            r'([A-Z]+)0+(\d)',
+            r'\1\2',
+            record['number']
+        )
+    ):
+        raise ValueError('MN wrong text bill identity')
+    prolog = soup.select_one('.btitle_prolog')
+    if prolog is None:
+        raise ValueError('MN missing bill/resolution text prolog')
+    paragraph = prolog.find_parent('p')
+    if paragraph is None:
+        raise ValueError('MN missing title paragraph')
+    for line in paragraph.select('.pl'):
+        line.decompose()
+    return paragraph.get_text(' ', strip=True)
 
 def _fetch(http,url):
     r=http.get(url,timeout=90);r.raise_for_status();time.sleep(1);return r.text
@@ -168,7 +290,20 @@ def scrape(state,term,verbose=False,force_fetch=False):
         print(f'Skipping MN {term}: completed outputs exist (use --force-fetch to refresh)');return
     cache.mkdir(parents=True,exist_ok=True);details,histories,counts=[],[],{}
     with make_session() as http:
-        sessions=select_sessions(_fetch(http,SEARCH_URL),term)
+        session_cache = cache / 'session_search.html'
+
+        if cache_io.exists(session_cache) and not force_fetch:
+            session_html = cache_io.read_text(
+                session_cache, encoding='utf-8'
+            )
+        else:
+            session_html = _fetch(http, SEARCH_URL)
+            select_sessions(session_html, term)
+            cache_io.write_text(
+                session_cache, session_html, encoding='utf-8'
+            )
+
+        sessions = select_sessions(session_html, term)
         for session in sessions:
             records=[];seen=set()
             for chamber in ('House','Senate'):
