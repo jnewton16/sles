@@ -60,16 +60,40 @@ def parse_detail(html,record,session,term):
     if visible!=number:raise ValueError('VT detail bill identity mismatch')
     selected=soup.select_one('#Form_SelectSession_selected_session option[selected]')
     if selected is None or selected['value']!=session['id']:raise ValueError('VT detail session mismatch')
-    title=_text(soup.select_one('.bill-title h2'))
-    if title!=' '.join(record['Title'].split()):raise ValueError('VT detail/index title mismatch')
-    sponsors=soup.select_one('#bill-sponsors-list')
-    if sponsors is None and not number.startswith('PR.'):raise ValueError('VT missing sponsor list')
+    title = _text(soup.select_one('.bill-title h2'))
+    index_title = ' '.join(record['Title'].split())
+    if not title:
+        raise ValueError('VT detail page missing title')
+    if title != index_title:
+        duplicated_suffix = (
+            'a similar intervention to disrupt or destroy the right '
+            'to self-determination and political sovereignty of any other nation'
+        )
+        known_source_error = (
+            session['id'] == '2026'
+            and number == 'J.R.H.8'
+            and index_title == title + duplicated_suffix
+        )
+        if not known_source_error:
+            raise ValueError('VT detail/index title mismatch')
+    sponsors = soup.select_one('#bill-sponsors-list')
+
+    known_omitted_resolution = (
+        session['id'] == '2026'
+        and number == 'H.C.R.163'
+        and title == 'Omitted'
+    )
+
+    if sponsors is None and not number.startswith('PR.') and not known_omitted_resolution:
+        raise ValueError('VT missing sponsor list')
+
     primary=[];cosponsors=[]
     for li in (sponsors.find_all('li',recursive=False) if sponsors else []):
         name=_text(li)
         if not name or name in ('Additional Sponsors','Less…'):continue
         (cosponsors if 'sponsor' in li.get('class',[]) else primary).append(name)
-    if not primary and not number.startswith('PR.'):raise ValueError('VT missing primary sponsor')
+    if not primary and not number.startswith('PR.') and not known_omitted_resolution:
+        raise ValueError('VT missing primary sponsor')
     number_clean=number.replace('.','');m=re.fullmatch(r'([A-Z]+)(\d+)',number_clean);bill=m[1]+m[2].zfill(4)
     paths=set(re.findall(r'bill/loadBillDetailedStatus/([\d.]+)/([\d]+)',html))
     if len(paths)!=1:raise ValueError('VT missing/ambiguous history endpoint')
@@ -107,6 +131,7 @@ def scrape(state,term,verbose=False,force_fetch=False):
     if all(cache_io.exists(p) for p in [*outputs,manifest]) and not force_fetch:
         print(f'Skipping VT {term}: completed outputs exist (use --force-fetch to refresh)');return
     details,histories,counts=[],[],{}
+    title_mismatches = []
     with make_session() as http:
         sessions=select_sessions(_cached(http,cache/'sessions.html',BASE_URL+f'bill/search/{years[1]}',force_fetch),term)
         for session in sessions:
@@ -116,7 +141,27 @@ def scrape(state,term,verbose=False,force_fetch=False):
             if len({r['BillNumber'] for r in records})!=len(records):raise ValueError('VT overlapping bill indexes')
             counts[sid]=len(records);print(f'VT {sid}: {len(records)} instruments',flush=True)
             for i,record in enumerate(records,1):
-                number=record['BillNumber'];html=_cached(http,cache/(sid+'_'+number+'.html'),BASE_URL+f'bill/status/{sid}/{number}',force_fetch);d,url=parse_detail(html,record,session,term)
+                number = record['BillNumber']
+                html = _cached(
+                    http,
+                    cache / (sid + '_' + number + '.html'),
+                    BASE_URL + f'bill/status/{sid}/{number}',
+                    force_fetch
+                )
+
+                d, url = parse_detail(html, record, session, term)
+
+                index_title = ' '.join(record['Title'].split())
+                detail_title = d[6]
+
+                if index_title != detail_title:
+                    title_mismatches.append({
+                        'bill': number,
+                        'session': session['label'],
+                        'index_title': index_title,
+                        'detail_title': detail_title,
+                        'url': d[8],
+                    })
                 actions=json.loads(_cached(http,cache/(sid+'_'+number+'_actions.json'),url,force_fetch));h=parse_actions(actions,d,session,term);details.append(d);histories.extend(h)
                 if verbose or i%25==0 or i==len(records):print(f'VT {sid} {i}/{len(records)} {number}: {len(h)} actions',flush=True)
     staged=[]
@@ -127,7 +172,7 @@ def scrape(state,term,verbose=False,force_fetch=False):
                 writer=csv.writer(handle);writer.writerow(header);writer.writerows(rows)
         cache_io.unlink(manifest, missing_ok=True)
         for pending,target in staged:cache_io.replace(pending, target)
-        write_manifest(manifest, {'term':term,'sessions':sessions,'counts':counts,'details':len(details),'histories':len(histories),'source_without_primary_sponsor':[{'bill':d[0],'session':d[1],'url':d[8]} for d in details if not d[4]],})
+        write_manifest(manifest, {'term':term,'sessions':sessions,'counts':counts,'details':len(details),'histories':len(histories),'source_title_mismatches': title_mismatches,'source_without_primary_sponsor':[{'bill':d[0],'session':d[1],'url':d[8]} for d in details if not d[4]],})
     finally:
         for pending,_ in staged:cache_io.unlink(pending, missing_ok=True)
     print(f'VT {term}: wrote {len(details)} details and {len(histories)} histories',flush=True)

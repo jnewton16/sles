@@ -192,7 +192,10 @@ def parse_records(instruments: list[dict], histories: list[dict], term: str) -> 
         if bill["instrumentType"] not in ("B", "R"):
             raise ValueError(f"Unknown Alabama instrument type: {bill['instrumentType']}")
         if not _text(bill.get("shortTitle")):
-            raise ValueError(f"Alabama instrument has no title: {key}")
+            if bill["instrumentType"] != "R":
+                raise ValueError(
+                    f"Alabama non-resolution instrument has no title: {key}"
+                )
         by_key[key] = bill
     grouped = defaultdict(list)
     history_ids = set()
@@ -201,7 +204,11 @@ def parse_records(instruments: list[dict], histories: list[dict], term: str) -> 
         if key in excluded:
             continue
         if key not in by_key:
-            raise ValueError(f"Alabama history has no matching instrument: {key}")
+            if re.fullmatch(r"BIR\d+", key[1]):
+                continue
+            raise ValueError(
+                f"Alabama history has no matching instrument: {key}"
+            )
         if action["sessionYear"] != by_key[key]["sessionYear"]:
             raise ValueError(f"Alabama history has wrong session year: {key}")
         if action["id"] in history_ids:
@@ -209,7 +216,13 @@ def parse_records(instruments: list[dict], histories: list[dict], term: str) -> 
         history_ids.add(action["id"])
         date.fromisoformat(action["calendarDate"])
         if not _text(action.get("matter")):
-            raise ValueError(f"Alabama history has no action text: {key}")
+            if (
+                term != "2023_2026"
+                or action["sessionAbbreviation"] != "2024RS"
+            ):
+                raise ValueError(
+                    f"Alabama history has no action text: {key}"
+                )
         grouped[key].append(action)
     details, actions = [], []
     for key, bill in sorted(by_key.items()):
@@ -220,7 +233,10 @@ def parse_records(instruments: list[dict], histories: list[dict], term: str) -> 
             bill["instrumentNbr"], bill.get("sponsor"), bill["sessionName"],
             bill.get("subject"), bill.get("body"), bill.get("currentStatus"),
             bill.get("assignedCommittee"), history[-1]["calendarDate"] if history else "",
-            BILL_URL, bill["shortTitle"], term, bill["sessionYear"], key[0], bill["id"],
+            BILL_URL, (
+                _text(bill.get("shortTitle"))
+                or _text(bill.get("subject"))
+            ), term, bill["sessionYear"], key[0], bill["id"],
             bill["instrumentType"], bill.get("allCommittees"), bill.get("prefiledDate"),
             bill.get("firstReadDate"), bill.get("actSummary"), BILL_URL,
         ]
@@ -237,6 +253,88 @@ def parse_records(instruments: list[dict], histories: list[dict], term: str) -> 
             actions.append([_text(value) for value in row])
     return details, actions
 
+def audit_source_exceptions(instruments, histories, term):
+    """Audit known source irregularities without modifying source records."""
+    indexed = {_key(row): row for row in instruments}
+
+    title_fallbacks = []
+    missing_titles = []
+    unmatched_bir = []
+    missing_actions = []
+
+    for bill in instruments:
+        if bill["instrumentType"] == "CF":
+            continue
+
+        if not _text(bill.get("shortTitle")):
+            entry = {
+                "session": bill["sessionAbbreviation"],
+                "bill": bill["instrumentNbr"],
+                "id": bill["id"],
+            }
+            if _text(bill.get("subject")):
+                title_fallbacks.append(entry)
+            else:
+                missing_titles.append(entry)
+
+    for action in histories:
+        key = _key(action)
+        bill = indexed.get(key)
+
+        if bill is None:
+            if not re.fullmatch(r"BIR\d+", key[1]):
+                raise ValueError(
+                    f"Unexpected unmatched Alabama history: {key}"
+                )
+            unmatched_bir.append({
+                "session": key[0],
+                "bill": key[1],
+                "history_id": action["id"],
+            })
+
+        elif bill["instrumentType"] != "CF":
+            if not _text(action.get("matter")):
+                missing_actions.append({
+                    "session": key[0],
+                    "bill": key[1],
+                    "history_id": action["id"],
+                    "date": action["calendarDate"],
+                })
+
+    if term == "2023_2026":
+        expected = {
+            "title_fallbacks": 11,
+            "missing_titles": 3,
+            "unmatched_bir": 809,
+            "missing_actions": 67,
+        }
+
+        actual = {
+            "title_fallbacks": len(title_fallbacks),
+            "missing_titles": len(missing_titles),
+            "unmatched_bir": len(unmatched_bir),
+            "missing_actions": len(missing_actions),
+        }
+
+        if actual != expected:
+            raise ValueError(
+                f"Alabama source exception counts changed: {actual}"
+            )
+
+        if any(
+            entry["session"] != "2024RS"
+            for entry in missing_actions
+        ):
+            raise ValueError(
+                "Alabama missing action outside verified session"
+            )
+
+    return {
+        "source_title_fallbacks": title_fallbacks,
+        "source_missing_titles": missing_titles,
+        "source_unmatched_bir_histories": unmatched_bir,
+        "source_missing_action_text": missing_actions,
+    }
 
 @scrape_run
 def scrape(state: str, term: str, verbose: bool = False, force_fetch: bool = False):
@@ -263,6 +361,9 @@ def scrape(state: str, term: str, verbose: bool = False, force_fetch: bool = Fal
     instruments = [row for snap in snapshots for row in snap["instruments"]]
     histories = [row for snap in snapshots for row in snap["histories"]]
     details, actions = parse_records(instruments, histories, term)
+    source_exceptions = audit_source_exceptions(
+        instruments, histories, term
+    )
     if not details or not actions:
         raise RuntimeError("Refusing to publish empty Alabama output")
     staged = []
@@ -283,6 +384,7 @@ def scrape(state: str, term: str, verbose: bool = False, force_fetch: bool = Fal
             "excluded_confirmations": sum(row["instrumentType"] == "CF" for row in instruments),
             "sessions": sorted({row["sessionAbbreviation"] for row in instruments}),
             "source_snapshots": {str(s["year"]): s["fetched_at"] for s in snapshots},
+            **source_exceptions,
         })
     finally:
         for pending, _ in staged:

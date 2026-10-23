@@ -47,8 +47,19 @@ def parse_listing(html,year,chamber,url):
     if not records:raise ValueError('RI index contains no base bills')
     return records,excluded
 
+def _text(node):
+    return ' '.join(node.get_text(' ', strip=True).split()) if node else ''
 
-def _text(node):return ' '.join(node.get_text(' ',strip=True).split()) if node else ''
+
+def parse_intro_date(raw_date):
+    """Handle known spelling variations in RI source dates."""
+    normalized = re.sub(
+        r'^Maart(?=\s)',
+        'March',
+        raw_date.strip(),
+        flags=re.IGNORECASE
+    )
+    return datetime.strptime(normalized, '%B %d, %Y').date().isoformat()
 
 
 def parse_bill(html,actions,record,term):
@@ -68,7 +79,7 @@ def parse_bill(html,actions,record,term):
         node=soup.find(['b','u'],string=re.compile(re.escape(label)))
         if node is None:raise ValueError('RI missing '+label)
         return _text(node.find_parent('p')).split(label,1)[1].strip()
-    sponsors_full=field('Introduced By:');intro=datetime.strptime(field('Date Introduced:'),'%B %d, %Y').date().isoformat();committee=field('Referred To:')
+    sponsors_full=field('Introduced By:');intro=parse_intro_date(field('Date Introduced:'));committee=field('Referred To:')
     kind=soup.select_one('p.TITLE_TYPE') or converted_kind
     if kind is None:raise ValueError('RI missing instrument type')
     bill_type=re.sub(r'\s+','',kind.get_text())

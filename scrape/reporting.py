@@ -24,7 +24,7 @@ EXCEPTION_FIELDS = frozenset({
     "source_blank_actions", "source_empty_histories", "source_empty_sponsors",
     "source_invalid_placeholders", "source_missing_measures",
     "source_missing_primary_authors", "source_missing_text", "source_not_found",
-    "source_without_primary_sponsor", "source_xml_fallbacks",
+    "source_without_primary_sponsor", "source_xml_fallbacks","source_title_mismatches"
 })
 
 

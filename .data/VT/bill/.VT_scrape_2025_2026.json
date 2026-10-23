@@ -1,0 +1,82 @@
+{
+  "term": "2025_2026",
+  "sessions": [
+    {
+      "id": "2026",
+      "label": "2025_2026_RS"
+    }
+  ],
+  "counts": {
+    "2026": 1718
+  },
+  "details": 1718,
+  "histories": 13493,
+  "source_title_mismatches": [
+    {
+      "bill": "J.R.H.8",
+      "session": "2025_2026_RS",
+      "index_title": "Joint resolution condemning the January 3, 2026, U.S. military incursion in Venezuela and imploring that Venezuelan President Nicolás Maduro and his wife, Cilia Flores, be released from U.S. custody; that all U.S. military forces recently deployed in the Caribbean Sea and the eastern Pacific Ocean be withdrawn immediately; that Venezuelans be allowed to exercise their right to political self-determination on their own accord; and that the United States abandon any intentions or plans to repeat a similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nationa similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nation",
+      "detail_title": "Joint resolution condemning the January 3, 2026, U.S. military incursion in Venezuela and imploring that Venezuelan President Nicolás Maduro and his wife, Cilia Flores, be released from U.S. custody; that all U.S. military forces recently deployed in the Caribbean Sea and the eastern Pacific Ocean be withdrawn immediately; that Venezuelans be allowed to exercise their right to political self-determination on their own accord; and that the United States abandon any intentions or plans to repeat a similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nation",
+      "url": "https://legislature.vermont.gov/bill/status/2026/J.R.H.8"
+    }
+  ],
+  "source_without_primary_sponsor": [
+    {
+      "bill": "PR0004",
+      "session": "2025_2026_RS",
+      "url": "https://legislature.vermont.gov/bill/status/2026/PR.4"
+    },
+    {
+      "bill": "HCR0163",
+      "session": "2025_2026_RS",
+      "url": "https://legislature.vermont.gov/bill/status/2026/H.C.R.163"
+    }
+  ],
+  "schema_version": 1,
+  "state": "VT",
+  "run_id": "39e2691f5443480ba5c62e1c60358d54",
+  "status": "succeeded",
+  "started_at": "2026-10-14T19:53:51.932371+00:00",
+  "completed_at": "2026-10-14T20:03:18.942419+00:00",
+  "outputs": [
+    {
+      "file": "VT_Bill_Details_2025_2026.csv",
+      "bytes": 941900
+    },
+    {
+      "file": "VT_Bill_Histories_2025_2026.csv",
+      "bytes": 2812742
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "source_title_mismatches",
+      "count": 1,
+      "records": [
+        {
+          "bill": "J.R.H.8",
+          "session": "2025_2026_RS",
+          "index_title": "Joint resolution condemning the January 3, 2026, U.S. military incursion in Venezuela and imploring that Venezuelan President Nicolás Maduro and his wife, Cilia Flores, be released from U.S. custody; that all U.S. military forces recently deployed in the Caribbean Sea and the eastern Pacific Ocean be withdrawn immediately; that Venezuelans be allowed to exercise their right to political self-determination on their own accord; and that the United States abandon any intentions or plans to repeat a similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nationa similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nation",
+          "detail_title": "Joint resolution condemning the January 3, 2026, U.S. military incursion in Venezuela and imploring that Venezuelan President Nicolás Maduro and his wife, Cilia Flores, be released from U.S. custody; that all U.S. military forces recently deployed in the Caribbean Sea and the eastern Pacific Ocean be withdrawn immediately; that Venezuelans be allowed to exercise their right to political self-determination on their own accord; and that the United States abandon any intentions or plans to repeat a similar intervention to disrupt or destroy the right to self-determination and political sovereignty of any other nation",
+          "url": "https://legislature.vermont.gov/bill/status/2026/J.R.H.8"
+        }
+      ]
+    },
+    {
+      "code": "source_without_primary_sponsor",
+      "count": 2,
+      "records": [
+        {
+          "bill": "PR0004",
+          "session": "2025_2026_RS",
+          "url": "https://legislature.vermont.gov/bill/status/2026/PR.4"
+        },
+        {
+          "bill": "HCR0163",
+          "session": "2025_2026_RS",
+          "url": "https://legislature.vermont.gov/bill/status/2026/H.C.R.163"
+        }
+      ]
+    }
+  ]
+}

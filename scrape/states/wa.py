@@ -73,13 +73,44 @@ def parse_bill(xml,sponsors,html,record,term):
         role=sponsor.findtext('Type');name=', '.join(filter(None,[sponsor.findtext('LastName'),sponsor.findtext('FirstName')])) or sponsor.findtext('Name')
         if role not in ('Primary','Secondary') or not name:raise ValueError('WA unknown sponsor role or missing name')
         (primary if role=='Primary' else secondary).append(name)
-    if not primary and record['kind']!='Initiative':raise ValueError('WA missing primary sponsor')
+    # Gubernatorial appointments and initiatives do not require
+    # legislative primary sponsors.
+    sponsor_exempt = (
+        record['kind'] == 'Initiative'
+        or number.startswith('SGA ')
+    )
+    if not primary and not sponsor_exempt:
+        raise ValueError(
+            f'WA missing primary sponsor: {number}'
+        )
     def value(path):return row.findtext(path) or ''
     url=BASE_URL+'?'+urlencode({'BillNumber':record['digits'],'Initiative':str(record['kind']=='Initiative').lower(),'Year':start})
     detail=[number.replace(' ',''),term,biennium,record['kind'],record['chamber'],'; '.join(primary),'; '.join(secondary),value('LegalTitle'),value('LongDescription'),value('IntroducedDate').split('T')[0],value('Appropriations'),value('CurrentStatus/Veto'),value('CurrentStatus/PartialVeto'),'; '.join(c.findtext('BillId') or '' for c in row.findall('Companions/Companion')),url,term]
-    if not detail[7] and not detail[8]:raise ValueError('WA missing title/description')
+    if not detail[7] and not detail[8]:
+        if not number.startswith('SGA '):
+            raise ValueError(
+                f'WA missing title/description: {number}'
+            )
     soup=BeautifulSoup(html,'lxml')
-    if _text(soup.title)!=number+' Washington State Legislature':raise ValueError('WA history page bill mismatch')
+    if record['kind'] == 'Initiative':
+        match = re.fullmatch(
+            r'[HS]I (IL\d{2}-\d{3})',
+            number
+        )
+        if not match:
+            raise ValueError(
+                f'WA malformed initiative identity: {number}'
+            )
+        expected_title = (
+            f'Initiative {match.group(1)} Washington State Legislature'
+        )
+    else:
+        expected_title = number + ' Washington State Legislature'
+
+    if _text(soup.title) != expected_title:
+        raise ValueError(
+            f'WA history page bill mismatch: {number}'
+        )
     selected=soup.select_one('#Year option[selected]')
     if selected is None or selected.get('value')!=str(start):raise ValueError('WA history page biennium mismatch')
     tables=soup.select('.historytable')
@@ -135,7 +166,20 @@ def scrape(state,term,verbose=False,force_fetch=False):
         for i,record in enumerate(records.values(),1):
             number=record['number'];base=number.replace(' ','');params={'biennium':record['biennium'],'billNumber':record['digits']}
             xml=_cached(http,cache/(base+'.xml'),API+'GetLegislation?'+urlencode(params),force_fetch)
-            sponsors=_cached(http,cache/(base+'_sponsors.xml'),API+'GetSponsors?'+urlencode({'biennium':record['biennium'],'billId':number}),force_fetch)
+            if record['kind'] == 'Initiative':
+                # Initiatives are sponsored by the people, not legislators.
+                # The sponsor service does not accept initiative bill IDs.
+                sponsors = '<ArrayOfSponsor></ArrayOfSponsor>'
+            else:
+                sponsors = _cached(
+                    http,
+                    cache / (base + '_sponsors.xml'),
+                    API + 'GetSponsors?' + urlencode({
+                        'biennium': record['biennium'],
+                        'billId': number,
+                    }),
+                    force_fetch,
+                )
             url=BASE_URL+'?'+urlencode({'BillNumber':record['digits'],'Initiative':str(record['kind']=='Initiative').lower(),'Year':years[0]})
             html=_cached(http,cache/(base+'.html'),url,force_fetch);d,h=parse_bill(xml,sponsors,html,record,term);details.append(d);histories.extend(h)
             if verbose or i%25==0 or i==len(records):print(f'WA {i}/{len(records)} {number}: {len(h)} actions',flush=True)

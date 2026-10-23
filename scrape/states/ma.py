@@ -138,31 +138,55 @@ def parse_history(html, canonical):
         raise ValueError('MA history page count mismatch')
     return rows, first, last, total
 
+MISSING_PEOPLE_SECTION = object()
 
 def parse_people(html):
     soup = BeautifulSoup(html, 'lxml')
     heading = soup.select_one('h3.fnSingleTab')
-    kind = heading.get_text(' ',strip=True) if heading else ''
-    if kind not in ('Petitioners','Cosponsors','Cosponsors/Original Petitioners'): raise ValueError('MA wrong people tab')
-    # The published people table is unpaginated. Fail if this source changes,
-    # rather than quietly truncating the list.
-    if soup.select('[onclick*="reloadAjaxContent"]'): raise ValueError('MA people table now paginates; update parser')
+    table = soup.select_one('table')
+    if heading is None and table is None:
+        return MISSING_PEOPLE_SECTION
+    if heading is None:
+        raise ValueError('MA missing people tab heading')
+    kind = heading.get_text(' ', strip=True)
+    if kind not in (
+        'Petitioners',
+        'Cosponsors',
+        'Cosponsors/Original Petitioners'
+    ):
+        raise ValueError('MA wrong people tab')
+    # The published people table is unpaginated.
+    if soup.select('[onclick*="reloadAjaxContent"]'):
+        raise ValueError(
+            'MA people table now paginates; update parser'
+        )
     table = heading.find_next('table')
-    if table is None: raise ValueError('MA missing people table')
+    if table is None:
+        raise ValueError('MA missing people table')
     names, originals = [], []
     for row in table.select('tbody tr'):
-        cells = row.find_all('td',recursive=False)
-        if len(cells) != 2 or not cells[0].get_text(strip=True): raise ValueError('MA malformed people row')
+        cells = row.find_all('td', recursive=False)
+        if len(cells) != 2 or not cells[0].get_text(strip=True):
+            raise ValueError('MA malformed people row')
         original = cells[0].select_one('.asterisk') is not None
-        for marker in cells[0].select('.sr-only, .asterisk'): marker.decompose()
-        name = cells[0].get_text(' ',strip=True)
-        if not name: raise ValueError('MA empty person name')
+        for marker in cells[0].select('.sr-only, .asterisk'):
+            marker.decompose()
+        name = cells[0].get_text(' ', strip=True)
+        if not name:
+            raise ValueError('MA empty person name')
         names.append(name)
-        if original: originals.append(name)
-    if not names: raise ValueError('MA empty people table')
-    return {'petitioners': '; '.join(names if kind == 'Petitioners' else originals),
-            'cosponsors': '; '.join(names if kind != 'Petitioners' else [])}
-
+        if original:
+            originals.append(name)
+    if not names:
+        raise ValueError('MA empty people table')
+    return {
+        'petitioners': '; '.join(
+            names if kind == 'Petitioners' else originals
+        ),
+        'cosponsors': '; '.join(
+            names if kind != 'Petitioners' else []
+        ),
+    }
 
 def _fetch(http, url, form=None, ajax=False):
     headers = {'X-Requested-With':'XMLHttpRequest'} if ajax else {}
@@ -190,6 +214,7 @@ def scrape(state, term, verbose=False, force_fetch=False):
         print(f'Skipping MA {term}: completed outputs exist (use --force-fetch to refresh)'); return
     cache = folder/'.cache'/term; cache.mkdir(parents=True,exist_ok=True)
     details, histories, empty, aliases, appendices = [], [], [], {}, []
+    unavailable_fields = []
     with make_session() as http:
         session = select_session(_fetch(http,BASE_URL+'/Bills/Search?SearchTerms=&Page=1'),term)
         records, seen, total, page = [], set(), None, 1
@@ -228,13 +253,54 @@ def scrape(state, term, verbose=False, force_fetch=False):
             else:
                 empty.append(record['number']); _save(local,html)
             if 'Cosponsor-tab' in tabs:
-                part=cache/f'{key}_people.html'
-                people=_cached(part,lambda:_fetch(http,tabs['Cosponsor-tab']),force_fetch)
-                people_detail, _ = parse_header(people, record, session, term)
-                if _number(people_detail[-2]) != _number(canonical): raise ValueError('MA wrong people page identity')
-                names=parse_people(people)
-                detail[5], detail[7] = names['petitioners'], names['cosponsors']
-                _save(part,people)
+                part = cache / f'{key}_people.html'
+                people = _cached(
+                    part,
+                    lambda: _fetch(http, tabs['Cosponsor-tab']),
+                    force_fetch
+                )
+                people_detail, _ = parse_header(
+                    people, record, session, term
+                )
+                if _number(people_detail[-2]) != _number(canonical):
+                    raise ValueError('MA wrong people page identity')
+                try:
+                    parsed_people = parse_people(people)
+                except ValueError:
+                    print(
+                        f"MA people-tab failure: {record['number']}",
+                        flush=True
+                    )
+                    print(
+                        f"People-tab URL: {tabs['Cosponsor-tab']}",
+                        flush=True
+                    )
+                    raise
+                if parsed_people is MISSING_PEOPLE_SECTION:
+                    if (
+                        session['court'] == 194
+                        and detail[2].strip().lower() == 'amendment'
+                    ):
+                        unavailable_fields.append({
+                            'bill': record['number'],
+                            'field': 'petitioners_and_cosponsors',
+                            'reason': (
+                                'Advertised people tab contains '
+                                'no people table'
+                            ),
+                            'url': tabs['Cosponsor-tab'],
+                        })
+                    else:
+                        raise ValueError(
+                            f"MA unexpected missing people section: "
+                            f"{record['number']}"
+                        )
+                else:
+                    detail[5], detail[7] = (
+                        parsed_people['petitioners'],
+                        parsed_people['cosponsors']
+                    )
+                _save(part, people)
             details.append(detail)
             histories.extend([record['number'],session['label'],*row,j,term,canonical] for j,row in enumerate(actions,1))
             if verbose or i%25==0 or i==len(records): print(f'MA {i}/{len(records)} {record["number"]}: {len(actions)} actions',flush=True)
@@ -248,7 +314,7 @@ def scrape(state, term, verbose=False, force_fetch=False):
         for pending,target in staged: cache_io.replace(pending, target)
 
         write_manifest(manifest, {'term':term,'court':session['court'],'details':len(details),'histories':len(histories),'source_empty_histories':empty,
-                                      'docket_bill_mappings':aliases,'excluded_appendices':appendices,
+                                      'unavailable_source_fields': unavailable_fields,'docket_bill_mappings':aliases,'excluded_appendices':appendices,
                                       'source_index_total':len(records)})
     finally:
         for pending,_ in staged:cache_io.unlink(pending, missing_ok=True)
