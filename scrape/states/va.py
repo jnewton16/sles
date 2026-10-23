@@ -189,6 +189,77 @@ def discover_bill_numbers(
 
     return bill_numbers
 
+def select_final_legislation(legislations, bill_number, session_code):
+    """Select the final available summary for one legislative instrument."""
+    if not isinstance(legislations, list) or not legislations:
+        raise ValueError("VA missing legislation records")
+
+    versions = {
+        "SUMMARY AS INTRODUCED": 1,
+        "SUMMARY AS PASSED HOUSE": 2,
+        "SUMMARY AS PASSED SENATE": 2,
+        "SUMMARY AS PASSED": 3,
+        "SUMMARY AS ENACTED WITH GOVERNOR'S RECOMMENDATION": 4,
+    }
+
+    first = legislations[0]
+
+    if not isinstance(first, dict):
+        raise ValueError("VA malformed legislation record")
+
+    identity = (
+        first.get("LegislationID"),
+        first.get("LegislationNumber"),
+        first.get("SessionCode"),
+    )
+
+    if (
+        identity[0] is None
+        or identity[1] != bill_number
+        or identity[2] != session_code
+    ):
+        raise ValueError("VA legislation identity mismatch")
+
+    selected = None
+    selected_rank = -1
+
+    for record in legislations:
+        if not isinstance(record, dict):
+            raise ValueError("VA malformed legislation record")
+
+        current_identity = (
+            record.get("LegislationID"),
+            record.get("LegislationNumber"),
+            record.get("SessionCode"),
+        )
+
+        if current_identity != identity:
+            raise ValueError("VA conflicting legislation identities")
+
+        version = record.get("SummaryVersion")
+
+        # A single unversioned record is permitted.
+        if version is None and len(legislations) == 1:
+            rank = 0
+        elif version in versions:
+            rank = versions[version]
+        else:
+            raise ValueError(
+                f"VA unexpected summary version: {version!r}"
+            )
+
+        # Records for the same version must not conflict.
+        if selected is not None and rank == selected_rank:
+            if record != selected:
+                raise ValueError(
+                    "VA conflicting records at same summary stage"
+                )
+
+        if rank > selected_rank:
+            selected = record
+            selected_rank = rank
+
+    return selected
 
 def scrape_bill(
     page: Page,
@@ -217,7 +288,7 @@ def scrape_bill(
     )
 
     # Set up API interception
-    api = {"bill": None, "patrons": None, "events": None}
+    api = {"bill": None, "patrons": None, "events": None,"event_types": None}
 
     def on_response(response):
         resp_url = response.url
@@ -230,10 +301,15 @@ def scrape_bill(
             elif "GetLegislationPatronsByIdAsync" in resp_url:
                 api["patrons"] = response.json()
             elif (
-                "GetLegislationEventByLegislationIDAsync"
+                "GetPublicLegislationEventHistoryListAsync"
                 in resp_url
             ):
                 api["events"] = response.json()
+            elif (
+                "getlegislationeventtypereferencesasync"
+                in resp_url.lower()
+            ):
+                api["event_types"] = response.json()
         except Exception:
             pass
 
@@ -258,17 +334,31 @@ def scrape_bill(
 
     # --- Extract bill details from API ---
     bill_data = api.get("bill")
-    if not bill_data or not bill_data.get("Legislations"):
+
+    if not isinstance(bill_data, dict):
+        return "Error"
+
+    if bill_data.get("Success") is not True:
+        return "Error"
+
+    legislations = bill_data.get("Legislations")
+
+    if not isinstance(legislations, list) or not legislations:
         if verbose:
             print(f"    No bill API data for {bill_id}")
         return "Error"
 
-    leg = bill_data["Legislations"][0]
-
-    # Missing responses must not be mistaken for empty sponsors or history.
-    if (bill_data.get("Success") is False
-            or len(bill_data["Legislations"]) != 1):
+    try:
+        leg = select_final_legislation(
+            legislations,
+            bill_number_raw,
+            session_code,
+        )
+    except ValueError as error:
+        if verbose:
+            print(f"    {bill_id}: {error}")
         return "Error"
+
     for key, field in (("patrons", "Patrons"), ("events", "LegislationEvents")):
         payload = api[key]
         if (not isinstance(payload, dict) or payload.get("Success") is False
@@ -349,6 +439,35 @@ def scrape_bill(
         if event_data else []
     )
 
+    # Official LIS event-type descriptions provide a fallback
+    # when individual history events lack Description.
+    event_type_data = api.get("event_types")
+    event_descriptions = {}
+
+    if (
+        isinstance(event_type_data, dict)
+        and event_type_data.get("Success") is True
+        and isinstance(event_type_data.get("EventTypes"), list)
+    ):
+        for reference in event_type_data["EventTypes"]:
+            if not isinstance(reference, dict):
+                continue
+
+            code = reference.get("EventCode")
+            description = (
+                reference.get("LegislationDescription") or ""
+            ).strip()
+
+            if not code or not description:
+                continue
+
+            # Track conflicting definitions without selecting one.
+            if code in event_descriptions:
+                if event_descriptions[code] != description:
+                    event_descriptions[code] = None
+            else:
+                event_descriptions[code] = description
+
     # Sort events by date and sequence
     events.sort(
         key=lambda e: (
@@ -370,10 +489,22 @@ def scrape_bill(
         )
         action = (
             (evt.get("Description") or "")
-            .replace("\r\n", "")
+            .replace("\r\n", " ")
             .replace("\n", " ")
             .strip()
         )
+
+        if not action:
+            code = evt.get("EventCode")
+            action = event_descriptions.get(code, "")
+
+        if not action:
+            raise ValueError(
+                f"VA missing history action: "
+                f"{bill_number_raw}, "
+                f"event {evt.get('LegislationEventID')}, "
+                f"code {evt.get('EventCode')}"
+            )
 
         # Build action detail URL from references if available
         action_url = ""
